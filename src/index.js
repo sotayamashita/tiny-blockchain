@@ -1,7 +1,12 @@
 const Block = require('./Block')
 
 function createGenesisBlock () {
-  return new Block(0, new Date(), 'Genesis Block', '0')
+  const index = 0
+  const today = new Date()
+  const timestamp = today.getTime()
+  const data = 'Genesis Block'
+  const hash = '0'
+  return new Block(index, timestamp, data, hash)
 }
 
 function nextBlock (lastBlock) {
